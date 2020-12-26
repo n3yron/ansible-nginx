@@ -1,9 +1,9 @@
 - name: Run a script using an executable in a system path
   script: /root/ansible/nginx_container_restart.py
 
-- name: Nginx restart
-   shell: "ls /etc/"
-   - name: "Check if my sites is accessible."
+#- name: Nginx restart
+#   shell: "ls /etc/"
+- name: "Check if my sites is accessible."
   uri:
     url: https://blog.n3yron.ru
     method: GET
