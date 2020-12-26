@@ -1,7 +1,7 @@
-- name: "Check if Google is accessible."
+-  name: Nginx restart
+   shell: "ls {{ MYDIR }}"
+   - name: "Check if my sites is accessible."
   uri:
-    url: https://google.com
+    url: https://blog.n3yron.ru
     method: GET
     status_code: 200
--  name: Root FS usage
-   shell: "ls {{ MYDIR }}"

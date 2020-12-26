@@ -1,1 +1,4 @@
-main.yml
+- name: Nginx container restart
+  hosts: all
+  roles:
+  - nginx
