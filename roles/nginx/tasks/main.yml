@@ -4,7 +4,7 @@
     dest: /root/ansible
 
 - name: Run a script using an executable in a system path
-  script: /root/ansible/nginx_container_restart.py
+  shell: /root/ansible/nginx_container_restart.py
 
 #- name: Nginx restart
 #   shell: "ls /etc/"
