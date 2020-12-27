@@ -13,5 +13,7 @@ print("Renew certs for hosts")
 print("Reloading Nginx")
 print(os.system('docker exec -d {} nginx -s reload'.format(nginx_container)))
 proc1 = subprocess.Popen(['docker', 'exec', '-d', nginx_container, 'certbot', '--nginx', '-d', 'aws.n3yron.ru', '-d', 'petclinic.n3yron.ru', '--force-renewal', '-n'], stdout=subprocess.PIPE)
-print(proc1)
+output1 = proc1.stdout.readlines()
+print(output1)
+
 #certbot --nginx -d aws.n3yron.ru -d petclinic.n3yron.ru --force-renewal -n
