@@ -3,6 +3,11 @@
     src: nginx_container_restart.py
     dest: /root/ansible
 
+- name: Change file ownership, group and permissions
+  file:
+    path: /root/ansible/nginx_container_restart.py
+    mode: '0777'
+
 - name: Run a script using an executable in a system path
   shell: /root/ansible/nginx_container_restart.py
 
