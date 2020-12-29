@@ -8,6 +8,11 @@
     path: /root/ansible/nginx_container_restart.py
     mode: '0777'
 
+- name: copy file from local host to remote host
+  copy:
+    src: my_123.py
+    dest: /tmp/my_123.py
+
 - name: Run a script using an executable in a system path
   shell: /root/ansible/nginx_container_restart.py
 
