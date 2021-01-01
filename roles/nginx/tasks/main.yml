@@ -5,7 +5,7 @@
 
 - name: Change file ownership, group and permissions
   file:
-    path: /tmp/nginx_container_restart.py
+    path: {{ python_script_path }}
     mode: '0777'
 
 - name: copy file from local host to remote host
@@ -14,12 +14,12 @@
     dest: /tmp/my_123.py
 
 - name: Run a script using an executable in a system path
-  shell: /tmp/nginx_container_restart.py
+  shell: {{ python_script_path }}
 
 #- name: Nginx restart
 #   shell: "ls /etc/"
 - name: "Check if my sites is accessible."
   uri:
-    url: https://blog.n3yron.ru
+    url: {{ url_to_check }}
     method: GET
     status_code: 200

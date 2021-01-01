@@ -1,0 +1,3 @@
+---
+    python_script_path: /tmp/nginx_container_restart.py
+    url_to_check: https://blog.n3yron.ru
