@@ -5,7 +5,7 @@
 
 - name: Change file ownership, group and permissions
   file:
-    path: {{ python_script_path }}
+    path: "{{ python_script_path }}"
     mode: '0777'
 
 - name: copy file from local host to remote host
@@ -14,12 +14,12 @@
     dest: /tmp/my_123.py
 
 - name: Run a script using an executable in a system path
-  shell: {{ python_script_path }}
+  shell: "{{ python_script_path }}"
 
 #- name: Nginx restart
 #   shell: "ls /etc/"
 - name: "Check if my sites is accessible."
   uri:
-    url: {{ url_to_check }}
+    url: "{{ url_to_check }}"
     method: GET
     status_code: 200
