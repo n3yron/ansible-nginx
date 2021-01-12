@@ -23,3 +23,4 @@ def my_function():
     	print("Something go wrong.")
 
 my_function()
+# nginx moved on k8s from swarm. Need to rewrite this code.
