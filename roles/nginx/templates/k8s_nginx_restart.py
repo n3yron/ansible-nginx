@@ -8,8 +8,7 @@ def my_function():
     output = proc.stdout.readlines()
     for line in output:
         if "nginx" in line:
-            nginx_pod_re = re.findall(r'nginx-\w+-\w+', line)
-
+            nginx_pod_re = re.findall(r'nginx-\w+-\w+', line) # finding name of nginx pod
     nginx_pod = ''.join(nginx_pod_re).strip()
     print("Your Nginx pod id is: "+nginx_pod)
 
