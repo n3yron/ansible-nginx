@@ -1,7 +1,13 @@
 #!/bin/python2
-import os, re, subprocess, shutil
+import os, re, subprocess, shutil, getpass
 
 def my_function():
+	if getpass.getuser() == 'root':
+		os.setuid(1000)
+        print('yes')
+    else:
+        print('no')
+
         #need to became n3yron user
     proc = subprocess.Popen(['kubectl', 'get', 'pods'], stdout=subprocess.PIPE)
     output = proc.stdout.readlines()
