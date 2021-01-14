@@ -13,7 +13,14 @@
     src: my_123.py
     dest: /tmp/my_123.py
 
+- name: Test become
+  become: yes
+  become_user: n3yron
+  shell: 'whoami'
+
 - name: Run a script using an executable in a system path
+  become: yes
+  become_user: n3yron
   shell: "{{ python_script_path }}"
 
 #- name: Nginx restart
