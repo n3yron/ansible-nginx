@@ -1,6 +1,6 @@
 - name: Copying required files
   template:
-    src: nginx_container_restart.py
+    src: k8s_nginx_restart.py
     dest: /tmp/
 
 - name: Change file ownership, group and permissions
