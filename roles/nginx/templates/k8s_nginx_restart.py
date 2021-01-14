@@ -2,8 +2,8 @@
 import os, re, subprocess, shutil, getpass
 
 def my_function():
-	if getpass.getuser() == 'root':
-		os.setuid(1000) # Became n3yron user if root to use kubectl
+    if getpass.getuser() == 'root':
+        os.setuid(1000) # Became n3yron user if root to use kubectl
     proc = subprocess.Popen(['kubectl', 'get', 'pods'], stdout=subprocess.PIPE)
     output = proc.stdout.readlines()
     for line in output:
